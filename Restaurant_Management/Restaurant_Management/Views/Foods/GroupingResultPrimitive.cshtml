@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "GroupingResult";
+}
+
+<div class="container mt-2" >
+    <div class="col-8">
+        <h3 style="margin-top:30px;">Result</h3>
+        <div class="d-flex justify-content-center">
+            <table class="table table-bordered ">
+                <thead class="table-light">
+                    <tr>
+                        <th>Key</th>
+                        <th>Data</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>
+                                @x.Key
+                            </td>
+                            <td>
+                                @x.Data
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+    </div> 
+</div>
+<div class="mb-4" style="margin-left:150px;">
+    <a asp-action="Index" asp-controller="Foods" class="btn btn-secondary"><i class="bi bi-arrow-return-left"> Back to index</i></a>
+</div>
+
